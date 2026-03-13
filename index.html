@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rupesh Kapgate — Senior Solution Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">RK</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-eyebrow">Senior Solution Architect &amp; Engineering Leader</span>
+        <h1 class="hero-name">Rupesh<br><em>Kapgate</em></h1>
+        <p class="hero-tagline">Building scalable cloud platforms and distributed systems that power enterprise transformation.</p>
+        <div class="hero-ctas">
+          <a href="#experience" class="btn btn-primary">View Experience</a>
+          <a href="assets/resume.pdf" download class="btn btn-secondary">Download Resume</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="16">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="6">0</span>
+            <span class="stat-label">Companies</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Projects Delivered</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-image-ring">
+          <img src="assets/profile.png" alt="Rupesh Kapgate" class="hero-photo" />
+        </div>
+        <div class="hero-badge">AVP · Tech Lead</div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">01</span>
+        <h2 class="section-title">About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col reveal">
+          <div class="about-img-frame">
+            <img src="assets/profile.png" alt="Rupesh Kapgate" />
+          </div>
+          <div class="about-meta">
+            <div class="meta-item"><span class="meta-icon">📍</span> Pune, Maharashtra</div>
+            <div class="meta-item"><span class="meta-icon">🎓</span> B.Tech, Information Technology</div>
+            <div class="meta-item"><span class="meta-icon">🏛️</span> Nagpur University, 2009</div>
+            <div class="meta-item"><span class="meta-icon">🗣️</span> English · Hindi · Marathi</div>
+          </div>
+        </div>
+        <div class="about-text-col reveal">
+          <p class="about-lead">Aspiring to leverage 16+ years of experience in solution architecture and full stack development to drive technology strategy and deliver scalable, high-impact solutions in senior engineering leadership.</p>
+          <p>A strategist and implementer with deep expertise across the full SDLC — from requirement analysis and technical design through to deployment and continuous improvement. Proven track record in end-to-end solution delivery including client engagement, workflow design, SOW preparation, and user enablement across global enterprise environments.</p>
+          <p>Architected and delivered enterprise-scale, high-performance platforms using Java, modern front-end frameworks, Big Data ecosystems, and cloud-native technologies. Expert in HLD and LLD for microservices-based systems, designing API contracts, database schema models, and real-time WebSocket applications. Strong communicator with a proven ability to engage C-level stakeholders and align technology strategy with business transformation goals.</p>
+          <div class="about-tags reveal">
+            <span class="tag">Solution Architecture</span>
+            <span class="tag">Cloud-Native</span>
+            <span class="tag">Microservices</span>
+            <span class="tag">Engineering Leadership</span>
+            <span class="tag">Agile / Scrum</span>
+            <span class="tag">Full Stack</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills alt-bg" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="radar-wrap reveal">
+          <h3 class="skills-sub">Competency Radar</h3>
+          <canvas id="radarChart"></canvas>
+        </div>
+        <div class="skill-categories reveal">
+          <h3 class="skills-sub">Technology Stack</h3>
+          <div class="skill-group">
+            <span class="skill-group-label">Back-End</span>
+            <div class="skill-pills">
+              <span class="pill">Java</span><span class="pill">Spring Boot</span><span class="pill">Node.js</span><span class="pill">Python (Flask)</span><span class="pill">Spring Cloud Gateway</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group-label">Front-End</span>
+            <div class="skill-pills">
+              <span class="pill">Angular</span><span class="pill">TypeScript</span><span class="pill">JavaScript</span><span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill">Bootstrap</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group-label">Cloud &amp; DevOps</span>
+            <div class="skill-pills">
+              <span class="pill accent">AWS</span><span class="pill accent">OpenShift</span><span class="pill accent">Kubernetes</span><span class="pill accent">Docker</span><span class="pill accent">Terraform</span><span class="pill accent">Jenkins</span><span class="pill accent">Tekton</span><span class="pill accent">Harness</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group-label">Data Platforms</span>
+            <div class="skill-pills">
+              <span class="pill">Starburst Enterprise</span><span class="pill">Oracle</span><span class="pill">MSSQL</span><span class="pill">MySQL</span><span class="pill">NoSQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group-label">Architecture Patterns</span>
+            <div class="skill-pills">
+              <span class="pill">Microservices</span><span class="pill">Event-Driven</span><span class="pill">API Gateway</span><span class="pill">Service Mesh</span><span class="pill">OAuth 2.0 / SSO</span><span class="pill">TDD / BDD</span><span class="pill">WebSocket</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group-label">Source Control &amp; Tools</span>
+            <div class="skill-pills">
+              <span class="pill">GitHub</span><span class="pill">Bitbucket</span><span class="pill">JFrog Artifactory</span><span class="pill">Postman</span><span class="pill">VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">AVP / Technical Lead</h3>
+                <span class="tl-company">Citicorp Services India Pvt. Ltd. (Citi)</span>
+              </div>
+              <span class="tl-date">Nov 2019 – Oct 2025</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Architected enterprise full-stack platforms — Data Marketplace Hub, People Insight Hub, Workforce Data Control — migrating from legacy Big Data ecosystems to cloud-scale data warehouses.</li>
+              <li>Led HLD and LLD for microservices-based platforms, defining system architecture, service decomposition, API contracts, and database schema models.</li>
+              <li>Designed cloud-native microservices architecture with containerized deployments on Kubernetes/OpenShift for scalable, fault-tolerant services.</li>
+              <li>Implemented real-time application capabilities using WebSocket, enabling event-driven communication between Angular frontends and backend microservices.</li>
+              <li>Established engineering quality standards through TDD, BDD, and contract testing, improving API reliability and reducing integration defects.</li>
+              <li>Integrated Amazon S3 and Azure Blob Storage for secure, scalable cloud object storage across enterprise data platforms.</li>
+              <li>Directed Agile delivery, sprint planning, backlog prioritization, and CI/CD automation using Tekton and Harness.</li>
+              <li>Led cross-functional engineering teams collaborating with global stakeholders and third-party vendors.</li>
+            </ul>
+            <div class="tl-tags"><span class="tl-tag">Java</span><span class="tl-tag">Angular</span><span class="tl-tag">Kubernetes</span><span class="tl-tag">AWS / Azure</span><span class="tl-tag">Microservices</span><span class="tl-tag">WebSocket</span><span class="tl-tag">Tekton</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Technical Lead</h3>
+                <span class="tl-company">Xoriant Solutions Pvt. Ltd.</span>
+              </div>
+              <span class="tl-date">May 2016 – Nov 2019</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Engineered and deployed scalable, full-stack HR platforms integrating Angular/Node.js frontends with secure, containerized backend architectures.</li>
+              <li>Optimized platform performance and resilience across OpenShift/Kubernetes environments, institutionalizing code governance and engineering mentorship.</li>
+              <li>Led Agile execution, enterprise system design, and delivery automation for high-velocity cross-functional product delivery.</li>
+              <li>Performed POCs to evaluate products/technologies based on customer requirements, driving client account growth.</li>
+              <li>Introduced data-driven decision-making leveraging KPIs to optimize workflows, improving delivery times and minimizing defects.</li>
+            </ul>
+            <div class="tl-tags"><span class="tl-tag">Angular</span><span class="tl-tag">Node.js</span><span class="tl-tag">OpenShift</span><span class="tl-tag">Kubernetes</span><span class="tl-tag">Agile</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Senior Software Specialist</h3>
+                <span class="tl-company">Mastek Ltd.</span>
+              </div>
+              <span class="tl-date">Aug 2014 – Apr 2016</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Contributed to enterprise application development and system integration with focus on application performance and scalability.</li>
+              <li>Developed and maintained application architectures, resolving integration issues between multiple systems.</li>
+            </ul>
+            <div class="tl-tags"><span class="tl-tag">Java</span><span class="tl-tag">Enterprise</span><span class="tl-tag">System Integration</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Senior Software Developer</h3>
+                <span class="tl-company">CitiusTech Pvt. Ltd.</span>
+              </div>
+              <span class="tl-date">Jul 2012 – Aug 2014</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Developed and maintained enterprise healthcare software solutions with a focus on performance and reliability.</li>
+            </ul>
+            <div class="tl-tags"><span class="tl-tag">Java</span><span class="tl-tag">Healthcare Tech</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Software Developer</h3>
+                <span class="tl-company">Germinait Solutions Pvt. Ltd.</span>
+              </div>
+              <span class="tl-date">Sep 2010 – Jul 2012</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Contributed to full-stack development of enterprise software solutions, laying the foundation in Java and web technologies.</li>
+            </ul>
+            <div class="tl-tags"><span class="tl-tag">Java</span><span class="tl-tag">Full Stack</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-node"></div>
+          <div class="timeline-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Software Developer</h3>
+                <span class="tl-company">RFArrays Systems Pvt. Ltd.</span>
+              </div>
+              <span class="tl-date">Nov 2009 – Aug 2010</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Started professional career developing software systems, building core engineering fundamentals.</li>
+            </ul>
+            <div class="tl-tags"><span class="tl-tag">Java</span><span class="tl-tag">Software Development</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE SHOWCASE -->
+  <section class="section architecture alt-bg" id="architecture">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Architecture Showcase</h2>
+      </div>
+      <p class="section-intro reveal">System design patterns and architectural approaches applied across enterprise platforms.</p>
+
+      <div class="arch-grid">
+
+        <div class="arch-card reveal">
+          <h3 class="arch-card-title">Cloud-Native Microservices Platform</h3>
+          <p class="arch-caption">API gateway pattern with container orchestration on Kubernetes, enabling fault-tolerant distributed services.</p>
+          <div class="mermaid arch-diagram">
+graph LR
+    A[Angular Frontend] --> B[Spring Cloud Gateway]
+    B --> C[Auth Service<br/>OAuth 2.0/SSO]
+    B --> D[Data Marketplace<br/>Service]
+    B --> E[People Insight<br/>Service]
+    B --> F[Workforce Data<br/>Service]
+    D --> G[(Starburst<br/>Enterprise)]
+    E --> G
+    F --> G
+    D --> H[(Amazon S3)]
+    E --> H
+    style A fill:#e8f4f8,stroke:#1b3a5c
+    style B fill:#1b3a5c,color:#fff,stroke:#1b3a5c
+    style C fill:#f0ece4,stroke:#1b3a5c
+    style G fill:#f7f5f0,stroke:#1b3a5c
+    style H fill:#f7f5f0,stroke:#1b3a5c
+          </div>
+        </div>
+
+        <div class="arch-card reveal">
+          <h3 class="arch-card-title">Event-Driven Real-Time Architecture</h3>
+          <p class="arch-caption">WebSocket-enabled event-driven communication between frontends and microservices for live data synchronization.</p>
+          <div class="mermaid arch-diagram">
+graph TD
+    A[Angular Frontend<br/>WebSocket Client] <-->|WebSocket| B[Backend Microservices]
+    B --> C{Event Bus}
+    C --> D[Data Processing<br/>Service]
+    C --> E[Notification<br/>Service]
+    C --> F[Analytics<br/>Service]
+    D --> G[(Data Warehouse)]
+    F --> H[(Time-Series DB)]
+    style A fill:#e8f4f8,stroke:#1b3a5c
+    style B fill:#1b3a5c,color:#fff,stroke:#1b3a5c
+    style C fill:#f0ece4,stroke:#1b3a5c
+    style G fill:#f7f5f0,stroke:#1b3a5c
+    style H fill:#f7f5f0,stroke:#1b3a5c
+          </div>
+        </div>
+
+        <div class="arch-card reveal">
+          <h3 class="arch-card-title">CI/CD Pipeline &amp; DevOps Flow</h3>
+          <p class="arch-caption">Automated delivery pipeline using Tekton and Harness for high-velocity, reliable software releases.</p>
+          <div class="mermaid arch-diagram">
+graph LR
+    A[Developer<br/>GitHub Push] --> B[Tekton<br/>Pipeline]
+    B --> C[Build &<br/>Test]
+    C --> D[Contract<br/>Testing]
+    D --> E[JFrog<br/>Artifactory]
+    E --> F[Harness<br/>Deploy]
+    F --> G[OpenShift /<br/>Kubernetes]
+    G --> H[Production]
+    style A fill:#e8f4f8,stroke:#1b3a5c
+    style B fill:#1b3a5c,color:#fff,stroke:#1b3a5c
+    style F fill:#1b3a5c,color:#fff,stroke:#1b3a5c
+    style H fill:#2d5a3d,color:#fff,stroke:#2d5a3d
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Key Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <span class="project-badge">Enterprise Platform</span>
+            <h3 class="project-name">Data Marketplace Hub</h3>
+            <p class="project-desc">Enterprise-scale data discovery and access platform enabling self-service analytics. Migrated from legacy Big Data ecosystems to cloud-scale data warehouses, improving data accessibility for enterprise teams.</p>
+            <div class="project-stack">
+              <span>Java</span><span>Spring Boot</span><span>Angular</span><span>Starburst Enterprise</span><span>Kubernetes</span><span>Amazon S3</span>
+            </div>
+            <div class="project-impact">
+              <span class="impact-icon">📈</span>
+              Improved platform scalability and data accessibility across enterprise teams globally.
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <span class="project-badge">People Analytics</span>
+            <h3 class="project-name">People Insight Hub</h3>
+            <p class="project-desc">Workforce analytics platform delivering real-time people data insights. Architected with WebSocket integration for live dashboard updates and cloud-native microservices for scalable performance.</p>
+            <div class="project-stack">
+              <span>Angular</span><span>Spring Boot</span><span>WebSocket</span><span>OpenShift</span><span>Azure Blob</span>
+            </div>
+            <div class="project-impact">
+              <span class="impact-icon">⚡</span>
+              Real-time data delivery enabling faster, data-driven workforce decisions.
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <span class="project-badge">Governance</span>
+            <h3 class="project-name">Workforce Data Control</h3>
+            <p class="project-desc">Enterprise data governance and control platform for workforce datasets. Implemented secure API design with OAuth 2.0/SSO, ensuring data integrity and compliance across global operations.</p>
+            <div class="project-stack">
+              <span>Java</span><span>OAuth 2.0</span><span>SSO</span><span>API Gateway</span><span>Docker</span><span>Kubernetes</span>
+            </div>
+            <div class="project-impact">
+              <span class="impact-icon">🔒</span>
+              Strengthened data governance and security compliance across enterprise systems.
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <span class="project-badge">HR Platform</span>
+            <h3 class="project-name">Scalable HR Platform</h3>
+            <p class="project-desc">Full-stack HR management platform at Xoriant, integrating Angular/Node.js frontends with containerized backend architectures. Institutionalized code governance standards and elite engineering practices.</p>
+            <div class="project-stack">
+              <span>Angular</span><span>Node.js</span><span>OpenShift</span><span>Kubernetes</span><span>CI/CD</span>
+            </div>
+            <div class="project-impact">
+              <span class="impact-icon">🚀</span>
+              High-velocity product delivery with improved platform resilience and team capability.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="section case-studies alt-bg" id="case-studies">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Architecture Case Studies</h2>
+      </div>
+
+      <div class="case-grid">
+
+        <div class="case-card reveal">
+          <div class="case-num">01</div>
+          <h3 class="case-title">Big Data to Cloud Data Warehouse Migration</h3>
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>Legacy Big Data ecosystems at Citi were limiting data accessibility and platform scalability. The existing infrastructure created bottlenecks in enterprise data consumption and analytics.</p>
+          </div>
+          <div class="case-section">
+            <h4>Architecture Approach</h4>
+            <p>Designed a phased migration to Starburst Enterprise as the cloud data warehouse layer, with API-first microservices providing unified data access. Introduced an API Gateway pattern with OAuth 2.0/SSO for secure, governed data access.</p>
+          </div>
+          <div class="case-stack">
+            <span>Starburst Enterprise</span><span>Spring Boot</span><span>Kubernetes</span><span>Amazon S3</span><span>OAuth 2.0</span>
+          </div>
+          <div class="case-impact">
+            <strong>Outcome:</strong> Significant improvement in platform scalability, data accessibility, and query performance across enterprise teams globally.
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-num">02</div>
+          <h3 class="case-title">Real-Time Enterprise Platform with WebSocket</h3>
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>Enterprise workforce dashboards relied on polling-based data refresh, leading to stale data, poor user experience, and excessive server load under concurrent usage.</p>
+          </div>
+          <div class="case-section">
+            <h4>Architecture Approach</h4>
+            <p>Implemented WebSocket-based event-driven communication between Angular frontends and backend microservices. Designed an event bus architecture for real-time data propagation with fallback REST APIs for non-real-time consumers.</p>
+          </div>
+          <div class="case-stack">
+            <span>WebSocket</span><span>Angular</span><span>Spring Boot</span><span>Event-Driven</span><span>OpenShift</span>
+          </div>
+          <div class="case-impact">
+            <strong>Outcome:</strong> Eliminated polling overhead, delivering live data updates with significantly reduced latency and improved user experience across enterprise dashboards.
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-num">03</div>
+          <h3 class="case-title">Engineering Quality Through TDD/BDD &amp; Contract Testing</h3>
+          <div class="case-section">
+            <h4>Problem</h4>
+            <p>Rapid microservices growth at Citi caused frequent integration defects and API contract violations between independently deployed services, slowing release velocity.</p>
+          </div>
+          <div class="case-section">
+            <h4>Architecture Approach</h4>
+            <p>Established organization-wide engineering standards: TDD for unit coverage, BDD for acceptance criteria, and consumer-driven contract testing (Pact) to verify API contracts between microservices before deployment.</p>
+          </div>
+          <div class="case-stack">
+            <span>TDD</span><span>BDD</span><span>Contract Testing</span><span>Pact</span><span>CI/CD</span><span>Tekton</span>
+          </div>
+          <div class="case-impact">
+            <strong>Outcome:</strong> Reduced integration defects, improved API reliability, and enabled confident independent service deployments at high velocity.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Get in Touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-intro reveal">
+          <p class="contact-lead">Open to senior engineering leadership, solution architecture, and remote opportunities. Let's build something exceptional.</p>
+          <a href="assets/resume.pdf" download class="btn btn-primary">Download Resume</a>
+        </div>
+        <div class="contact-details reveal">
+          <a href="tel:+917875878015" class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">+91-7875878015</span>
+            </div>
+          </a>
+          <a href="mailto:rupesh.kapgate@gmail.com" class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">rupesh.kapgate@gmail.com</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Pune, Maharashtra — Open to Remote</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-name">Rupesh Kapgate</span>
+        <span class="footer-copy">&copy; 2025 · Senior Solution Architect</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
